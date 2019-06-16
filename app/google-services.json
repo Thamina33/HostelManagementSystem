@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "978453030884",
+    "firebase_url": "https://hostelmanagementsystem-5c666.firebaseio.com",
+    "project_id": "hostelmanagementsystem-5c666",
+    "storage_bucket": "hostelmanagementsystem-5c666.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978453030884:android:006c96ba37c356d8",
+        "android_client_info": {
+          "package_name": "com.example.hostelmanagementsystem"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978453030884-5pjajqel381l7i7o9ofrb3sqnm1sucqt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hostelmanagementsystem",
+            "certificate_hash": "e7134e9e771c4552820851631487affe4d0ba29b"
+          }
+        },
+        {
+          "client_id": "978453030884-anj140udfuk1tj6kqjq03fj785ted51m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAQ627vkLB90oOZilEfjqSyn2KAkV12mgo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978453030884-anj140udfuk1tj6kqjq03fj785ted51m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
