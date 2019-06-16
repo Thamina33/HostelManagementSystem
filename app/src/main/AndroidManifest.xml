@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.example.hostelmanagementsystem">
 
     <application
@@ -8,11 +9,16 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
-        <activity android:name=".Expense_Row"></activity>
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".studentListPage"
+            android:theme="@style/Theme.Design.NoActionBar">
+
+        </activity>
+        <activity android:name=".Expense_Row" />
         <activity android:name=".Fees_Row" />
         <activity android:name=".Complain_Row" />
-        <activity android:name=".StudentInformation" />
+        <activity android:name=".CreateNewStudent" />
         <activity android:name=".HomePage">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

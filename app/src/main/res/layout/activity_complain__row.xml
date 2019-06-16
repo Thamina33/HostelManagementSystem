@@ -164,7 +164,6 @@
                    android:layout_marginLeft="10dp"
                    android:textSize="16dp"
                    android:textColor="#fff"
-                   android:drawableLeft="10dp"
                    android:gravity="center"
                    android:textStyle="bold"
                    android:text="Date : "/>
