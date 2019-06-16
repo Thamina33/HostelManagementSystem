@@ -9,7 +9,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".StudentInformation"></activity>
+        <activity android:name=".Expense_Row"></activity>
+        <activity android:name=".Fees_Row" />
+        <activity android:name=".Complain_Row" />
+        <activity android:name=".StudentInformation" />
+        <activity android:name=".HomePage">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
