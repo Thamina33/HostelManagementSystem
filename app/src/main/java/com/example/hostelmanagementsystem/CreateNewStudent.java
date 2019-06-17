@@ -77,7 +77,7 @@ public class CreateNewStudent extends AppCompatActivity {
                 }
                 else {
 
-                    Toast.makeText(getApplicationContext() , "Error: Enter The Feild Properly ", Toast.LENGTH_LONG)
+                    Toast.makeText(getApplicationContext() , "Error: Enter The Field Properly ", Toast.LENGTH_LONG)
                             .show();
                 }
 

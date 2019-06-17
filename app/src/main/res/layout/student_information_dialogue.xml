@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:paddingEnd="16dp"
+            android:paddingStart="6dp"
+            android:background="#ffffff"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/backword_signsmall" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+        <LinearLayout
+            android:layout_marginTop="35dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name : "
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/nameOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:id="@+id/postIDOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="0.1sp"
+                />
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Class : "
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/calssOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roll : "
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/rollOfDialogue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+                android:layout_marginLeft="5dp"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sec : "
+                android:layout_marginLeft="10dp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+            <TextView
+                android:id="@+id/secOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Phone\n(guardian) : "
+                android:layout_gravity="center"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/phOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginRight="20dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Addresss : "
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                />
+
+
+            <TextView
+                android:id="@+id/adressOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginLeft="5dp"
+                />
+
+
+        </LinearLayout>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="15dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date of\nAddmision : "
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_gravity="center"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:id="@+id/doaOfdialouge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:textColor="#000000"
+                android:textSize="18sp"
+                android:layout_marginStart="5dp"
+                />
+
+
+        </LinearLayout>
+
+            <Space
+                android:layout_width="0dp"
+                android:layout_height="15dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Payment: "
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_gravity="center"
+                    android:textStyle="bold" />
+
+
+                <TextView
+                    android:id="@+id/paymentDialogue"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:ems="10"
+                    android:textColor="#000000"
+                    android:textSize="18sp"
+                    android:layout_marginStart="5dp"
+                    />
+
+
+            </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="bottom|center"
+            android:weightSum="2"
+
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"
+            >
+
+            <Button
+                android:id="@+id/createStudentBtn"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#0AAF3D"
+                android:drawableStart="@drawable/ic_close_white_24dp"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Ok"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+
+                />
+            <Button
+
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:background="#FF0000"
+                android:drawablePadding="5dp"
+                android:gravity="center"
+                android:text="Delete"
+                android:drawableStart="@drawable/ic_check_white"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                />
+        </LinearLayout>
+
+
+        </LinearLayout>
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

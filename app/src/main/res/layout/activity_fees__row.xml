@@ -9,13 +9,14 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="150dp"
+        android:layout_marginTop="10dp"
         >
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:background="@drawable/green_gradnt"
-            android:layout_marginTop="10dp"
+
             >
 
             <LinearLayout
@@ -36,7 +37,8 @@
 
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:id="@+id/nameOfRow"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Rahim"
                     android:textColor="#FFFFFF"
@@ -54,7 +56,8 @@
                     />
 
                 <TextView
-                    android:layout_width="100dp"
+                    android:id="@+id/classOfRow"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="7"
                     android:textColor="#FFFFFF"
@@ -82,6 +85,7 @@
 
 
                 <TextView
+                    android:id="@+id/rollOfRow"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="101"
@@ -100,6 +104,7 @@
                     />
 
                 <TextView
+                    android:id="@+id/secOFRow"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="A"
@@ -120,7 +125,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Date : "
+                    android:text="DOA : "
                     android:textStyle="bold"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
@@ -128,15 +133,59 @@
 
 
                 <TextView
+                    android:id="@+id/doaOfRow"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:text="22/05/2019"
                     android:textColor="#FFFFFF"
                     android:textSize="18sp"
-                    android:layout_marginLeft="5dp"
+                    android:layout_marginStart="5dp"
                     />
 
             </LinearLayout>
+            <TextView
+                android:id="@+id/adressOfRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Adress :"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="visible"
+                android:layout_marginStart="18dp"
+                />
+            <TextView
+                android:id="@+id/phoneOfRow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Ph :"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:visibility="visible"
+                android:layout_marginStart="18dp"
+                />
+            <TextView
+                android:id="@+id/idOfRow"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="0.1sp"
+                android:visibility="invisible"
+                android:layout_marginStart="5dp"
+                />
+
+            <TextView
+                android:id="@+id/paymentOfRow"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#FFFFFF"
+                android:textSize="0.1sp"
+                android:visibility="invisible"
+                android:layout_marginStart="5dp"
+                />
 
 
         </LinearLayout>
