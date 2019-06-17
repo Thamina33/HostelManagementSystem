@@ -11,10 +11,16 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".studentListPage"
-            android:theme="@style/Theme.Design.NoActionBar">
-
-        </activity>
+        <activity android:name=".complainList"></activity>
+        <activity
+            android:name=".addExpencesList"
+            android:theme="@style/hisabPageTheme" />
+        <activity
+            android:name=".hisabPage"
+            android:theme="@style/hisabPageTheme" />
+        <activity
+            android:name=".studentListPage"
+            android:theme="@style/Theme.Design.NoActionBar" />
         <activity android:name=".Expense_Row" />
         <activity android:name=".Fees_Row" />
         <activity android:name=".Complain_Row" />

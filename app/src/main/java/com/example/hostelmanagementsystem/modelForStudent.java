@@ -4,6 +4,9 @@ public class modelForStudent {
 
     String postId , name , roll  , aclass  ,doa  , paymonthList , section , address , ph  ;
 
+    // alt + ins
+
+
     public modelForStudent() {
     }
 
@@ -17,39 +20,6 @@ public class modelForStudent {
         this.section = section;
         this.address = address;
         this.ph = ph;
-    }
-
-    public String getAddress() {
-        return address;
-    }
-
-    public void setAddress(String address) {
-        this.address = address;
-    }
-
-    public String getPh() {
-        return ph;
-    }
-
-    public void setPh(String ph) {
-        this.ph = ph;
-    }
-
-    public String getSection() {
-        return section;
-    }
-
-    public void setSection(String section) {
-        this.section = section;
-    }
-
-    public modelForStudent(String postId, String name, String roll, String aclass, String doa, String paymonthList) {
-        this.postId = postId;
-        this.name = name;
-        this.roll = roll;
-        this.aclass = aclass;
-        this.doa = doa;
-        this.paymonthList = paymonthList;
     }
 
     public String getPostId() {
@@ -98,5 +68,29 @@ public class modelForStudent {
 
     public void setPaymonthList(String paymonthList) {
         this.paymonthList = paymonthList;
+    }
+
+    public String getSection() {
+        return section;
+    }
+
+    public void setSection(String section) {
+        this.section = section;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
+
+    public String getPh() {
+        return ph;
+    }
+
+    public void setPh(String ph) {
+        this.ph = ph;
     }
 }

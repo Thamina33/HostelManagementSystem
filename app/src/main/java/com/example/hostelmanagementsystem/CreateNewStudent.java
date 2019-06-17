@@ -55,7 +55,7 @@ public class CreateNewStudent extends AppCompatActivity {
             public void onClick(View view) {
 
 
-
+ // getting the data
                 DATE = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
 
                 name = nameIN.getText().toString();
@@ -71,7 +71,9 @@ public class CreateNewStudent extends AppCompatActivity {
 
 
 
-                        initUploadData(name, roll , section , adress , phone , classs) ;
+                       initUploadData(name, roll , section , adress , phone , classs) ;
+
+
 
 
                 }
@@ -91,6 +93,8 @@ public class CreateNewStudent extends AppCompatActivity {
 
 
     }
+
+
 
     private void initUploadData(String name, String roll, String section, String adress, String phone, String classs) {
 

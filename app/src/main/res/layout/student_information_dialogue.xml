@@ -306,7 +306,7 @@
             >
 
             <Button
-                android:id="@+id/createStudentBtn"
+                android:id="@+id/okBtn"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"
@@ -320,7 +320,7 @@
 
                 />
             <Button
-
+                android:id="@+id/delteBtn"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="wrap_content"

@@ -8,10 +8,12 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.OnBackPressedCallback;
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.widget.SearchView;
 import androidx.appcompat.widget.Toolbar;
@@ -19,12 +21,19 @@ import androidx.core.view.MenuItemCompat;
 import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.FragmentManager;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class ExampleDialog extends DialogFragment {
 
     public static final String TAG = "example_dialog";
 
     private Toolbar toolbar;
 
+String id ;
 
 
     public static ExampleDialog display(FragmentManager fragmentManager) {
@@ -77,7 +86,7 @@ public class ExampleDialog extends DialogFragment {
             }
         });
 
-        TextView name , Class ,roll , section , adress , ph , paymentMonth , doa , postID  ;
+        final TextView name , Class ,roll , section , adress , ph , paymentMonth , doa , postID  ;
 
         name = view.findViewById(R.id.nameOfdialouge);
         Class = view.findViewById(R.id.calssOfdialouge);
@@ -88,8 +97,15 @@ public class ExampleDialog extends DialogFragment {
         paymentMonth= view.findViewById(R.id.paymentDialogue);
         doa = view.findViewById(R.id.doaOfdialouge);
         postID= view.findViewById(R.id.postIDOfdialouge);
+        Button okBTN = view.findViewById(R.id.okBtn) ;
+        Button delteBtn = view.findViewById(R.id.delteBtn);
 
-        String id = getArguments().getString("id");
+
+
+        // getting the data from the bundle
+
+
+         id = getArguments().getString("id");
         doa.setText(getArguments().getString("DOA"));
         name.setText(getArguments().getString("NAME"));
         Class.setText(getArguments().getString("CLASS"));
@@ -100,6 +116,44 @@ public class ExampleDialog extends DialogFragment {
         ph.setText(getArguments().getString("PH"));
 
 
+        okBTN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                dismiss();
+
+
+            }
+        });
+
+
+        delteBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                DatabaseReference mref = FirebaseDatabase.getInstance().getReference("studentList");
+
+                mref.child(id).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+
+                        dismiss();
+
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                        Toast.makeText(getContext() , "Error :"+ e.getMessage() , Toast.LENGTH_LONG)
+                                .show();
+
+                    }
+                });
+
+
+
+            }
+        });
 
     }
 

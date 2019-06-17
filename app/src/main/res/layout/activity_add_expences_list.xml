@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    tools:context=".studentListPage">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        app:navigationIcon="@drawable/backword_signsmall"
+        app:theme="@style/ToolBarStyle"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:elevation="5dp"
+        android:background="#ffffff"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/addExpBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_gravity="end"
+                app:strokeColor="@color/colorAccent"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:background="#ffff"
+                android:textAlignment="center"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="15dp"
+                android:gravity="center_vertical"
+                android:text="Add Expenses"
+                android:paddingTop="2dp"
+                android:textColor="#000000"
+                android:textSize="14sp"
+                app:strokeWidth="0.6dp"
+                android:textStyle="normal" />
+    </com.google.android.material.appbar.MaterialToolbar>
+
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/reclyclerViewForExpenceList"
+        android:layout_width="match_parent"
+        android:background="@color/myGrey"
+        android:layout_height="match_parent"
+        >
+
+    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+</LinearLayout>

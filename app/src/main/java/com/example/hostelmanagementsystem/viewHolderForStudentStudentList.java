@@ -62,8 +62,8 @@ public class viewHolderForStudentStudentList extends RecyclerView.ViewHolder {
         mRollTv.setText(roll);
         mClassTv.setText(aclass);
         mSectionTv.setText(section);
-        mAdress.setText(address);
-        phTv.setText(ph);
+        mAdress.setText("Address :"+address);
+        phTv.setText("Ph :" + ph);
 
 
     }
