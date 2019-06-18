@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:ba
     tools:context=".HomePage">
 
 
@@ -14,13 +15,13 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginTop="50dp">
-        
+
         <View android:layout_width="2dp"
               android:layout_height="match_parent"
               android:layout_marginLeft="29dp"
               android:background="#000"
         />
-        
+
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -30,11 +31,11 @@
                 android:textColor="#000"
                 android:layout_marginLeft="5dp"
         />
-    
-    
-    
-    
-    
+
+
+
+
+
     </LinearLayout>
     <LinearLayout
             android:layout_width="match_parent"
@@ -44,22 +45,22 @@
             android:gravity="center"
             android:layout_marginTop="20dp"
     >
-        
-        
-        
+
+
+
         <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
                 android:layout_height="120dp">
-            
+
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@drawable/green_gradnt"
                     android:orientation="horizontal"
                     android:gravity="center"
-            
+
             >
-                
+
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -69,9 +70,9 @@
                         android:textStyle="bold"
                         android:layout_gravity="center"
                 />
-            
+
             </LinearLayout>
-        
+
         </androidx.cardview.widget.CardView>
         <Space
                 android:layout_width="15dp"
@@ -80,7 +81,7 @@
             android:id="@+id/studentIdBTN"
                 android:layout_width="170dp"
                 android:layout_height="120dp">
-            
+
             <LinearLayout
 
                     android:layout_width="match_parent"
@@ -88,9 +89,9 @@
                     android:background="@drawable/green_gradnt"
                     android:orientation="horizontal"
                     android:gravity="center"
-            
+
             >
-                
+
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -101,18 +102,18 @@
                     android:textAlignment="center"
                         android:layout_gravity="center"
                 />
-            
+
             </LinearLayout>
-        
+
         </androidx.cardview.widget.CardView>
-    
+
     </LinearLayout>
     <Space
             android:layout_width="0dp"
             android:layout_height="15dp"/>
-    
-    
-    
+
+
+
     <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -124,7 +125,7 @@
               android:layout_marginLeft="29dp"
               android:background="#000"
         />
-        
+
         <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -149,8 +150,8 @@
             android:gravity="center"
             android:layout_marginTop="15dp"
     >
-        
-   
+
+
     
         <androidx.cardview.widget.CardView
             android:id="@+id/finaceBtn"
@@ -161,7 +162,7 @@
 
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:background="@drawable/green_gradnt"
+                android:background="@drawable/orenge_gredient"
                 android:orientation="horizontal"
                 android:gravity="center"
                 
@@ -186,16 +187,16 @@
         <androidx.cardview.widget.CardView
                 android:layout_width="170dp"
                 android:layout_height="60dp">
-    
+
             <LinearLayout
                     android:layout_width="170dp"
                     android:layout_height="match_parent"
                     android:background="@drawable/green_gradnt"
                     android:orientation="horizontal"
                     android:gravity="center"
-    
+
             >
-        
+
                 <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
@@ -205,7 +206,7 @@
                         android:textStyle="bold"
                         android:layout_gravity="center"
                 />
-    
+
             </LinearLayout>
     
         </androidx.cardview.widget.CardView>
@@ -260,7 +261,7 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/green_gradnt"
+                    android:background="@drawable/bank_purple_gredient"
                     android:orientation="horizontal"
                     android:gravity="center"
             
@@ -303,7 +304,7 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/green_gradnt"
+                    android:background="@drawable/pink_gredient"
                     android:orientation="horizontal"
                     android:gravity="center"
             
@@ -332,7 +333,7 @@
             <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:background="@drawable/green_gradnt"
+                    android:background="@drawable/orenge_gredient"
                     android:orientation="horizontal"
                     android:gravity="center"
 

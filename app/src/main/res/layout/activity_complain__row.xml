@@ -181,7 +181,7 @@
                    android:layout_height="25dp"
                    android:orientation="horizontal"
                    android:layout_marginBottom="5dp"
-                   android:background="@drawable/green_gradnt"
+                   android:background="@drawable/pink_gredient"
 
                    >
 

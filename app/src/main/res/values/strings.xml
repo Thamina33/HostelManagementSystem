@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Hostel Management System</string>
+    
+    
+    <string-array name="Complain">
+
+        <item>Namaj</item>
+        <item>Class faki</item>
+        <item>Palano</item>
+        <item>Gum</item>
+    </string-array>
+
+
+
+
 </resources>
