@@ -168,6 +168,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp">
             <TextView
+                android:id="@+id/phView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Phone\n(guardian) : "
@@ -202,6 +203,7 @@
             android:layout_marginTop="15dp"
             android:layout_marginRight="20dp">
             <TextView
+                android:id="@+id/adressView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Addresss : "
@@ -236,6 +238,7 @@
             android:layout_marginRight="20dp">
 
             <TextView
+                android:id="@+id/doaVIew"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Date of\nAddmision : "
@@ -271,6 +274,7 @@
                 android:layout_marginRight="20dp">
 
                 <TextView
+                    android:id="@+id/payView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Payment: "

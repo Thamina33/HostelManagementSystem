@@ -3,19 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:orientation="vertical"
+
     tools:context=".Complain_Row">
 
    <androidx.cardview.widget.CardView
+       android:elevation="8dp"
+       app:cardCornerRadius="8dp"
+       android:layout_marginTop="8dp"
        android:layout_width="match_parent"
-       android:layout_height="150dp"
+       android:layout_height="wrap_content"
        >
        <LinearLayout
+           android:background="#ffffff"
            android:layout_width="match_parent"
            android:layout_height="match_parent"
            android:orientation="vertical"
-           android:layout_marginTop="10dp"
            >
 
            <LinearLayout
@@ -36,6 +40,7 @@
 
 
                <TextView
+                   android:id="@+id/nameOfROWW"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="Rahim"
@@ -54,6 +59,7 @@
                    />
 
                <TextView
+                   android:id="@+id/ClassOfROWW"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="7"
@@ -82,6 +88,7 @@
 
 
                <TextView
+                   android:id="@+id/rollOfROWW"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="101"
@@ -100,12 +107,13 @@
                    />
 
                <TextView
+                   android:id="@+id/secOfROWW"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="A"
                    android:textColor="#000000"
                    android:textSize="18sp"
-                   android:layout_marginLeft="5dp"
+                   android:layout_marginStart="5dp"
                    />
 
 
@@ -128,6 +136,7 @@
 
 
                <TextView
+                   android:id="@+id/reasonOfROWW"
                    android:layout_width="100dp"
                    android:layout_height="wrap_content"
                    android:text="Rahim"
@@ -138,50 +147,75 @@
 
            </LinearLayout>
 
-
-       </LinearLayout>
-
-       <LinearLayout
-           android:layout_width="match_parent"
-           android:layout_height="match_parent"
-           android:orientation="horizontal"
-           android:gravity="bottom|start"
-           android:layout_marginLeft="0dp"
-           android:layout_marginRight="0dp"
-           >
+           <TextView
+               android:id="@+id/detailsOfROWW"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="20dp"
+               android:layout_marginTop="8dp"
+               android:textSize="17sp"
+               android:textColor="#000"
+               android:gravity="center"
+               android:textStyle="bold"
+               android:text="Details : "/>
+           <TextView
+               android:id="@+id/idOfROWW"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginStart="20dp"
+               android:textSize="0.1sp"
+               android:textColor="#fff"
+               />
 
            <LinearLayout
                android:layout_width="match_parent"
-               android:layout_height="25dp"
+               android:layout_height="wrap_content"
                android:orientation="horizontal"
-               android:background="@drawable/green_gradnt"
-
+               android:layout_marginTop="5dp"
+               android:layout_marginLeft="0dp"
+               android:layout_marginRight="0dp"
                >
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="10dp"
-                   android:textSize="16dp"
-                   android:textColor="#fff"
-                   android:gravity="center"
-                   android:textStyle="bold"
-                   android:text="Date : "/>
+               <LinearLayout
+                   android:layout_width="match_parent"
+                   android:layout_height="25dp"
+                   android:orientation="horizontal"
+                   android:layout_marginBottom="5dp"
+                   android:background="@drawable/green_gradnt"
 
-               <TextView
-                   android:layout_width="wrap_content"
-                   android:layout_height="wrap_content"
-                   android:layout_marginLeft="5dp"
-                   android:textSize="16dp"
-                   android:textColor="#fff"
-                   android:gravity="center"
-                   android:textStyle="bold"
-                   android:text="12/05/2019"/>
+                   >
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="10dp"
+                       android:textSize="16dp"
+                       android:textColor="#fff"
+                       android:gravity="center"
+                       android:textStyle="bold"
+                       android:text="Date : "/>
+
+                   <TextView
+                       android:id="@+id/dateOFROWW"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_marginLeft="5dp"
+                       android:textSize="16dp"
+                       android:textColor="#fff"
+                       android:gravity="center"
+                       android:textStyle="bold"
+                       android:text="12/05/2019"/>
+
+               </LinearLayout>
+
 
            </LinearLayout>
 
-
        </LinearLayout>
+
+
+
+
 
    </androidx.cardview.widget.CardView>
 

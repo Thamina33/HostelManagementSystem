@@ -32,6 +32,9 @@ public class HomePage extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
+                Intent o = new Intent(getApplicationContext(), complainList.class);
+                startActivity(o);
+
             }
         });
 
