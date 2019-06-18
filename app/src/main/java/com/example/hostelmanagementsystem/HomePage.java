@@ -15,8 +15,9 @@ import com.google.android.material.appbar.MaterialToolbar;
 
 public class HomePage extends AppCompatActivity {
 
-    CardView studentIdbtn , finaceBtn  , comaplainbtn ;
+    CardView studentIdbtn , finaceBtn  , comaplainbtn  , feecollectorbtn ;
     TextView add_stdn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,21 @@ public class HomePage extends AppCompatActivity {
         studentIdbtn = (CardView) findViewById(R.id.studentIdBTN);
         finaceBtn = findViewById(R.id.finaceBtn)  ;
         comaplainbtn = findViewById(R.id.complainID) ;
+        feecollectorbtn = findViewById(R.id.feeCollector) ;
+
+        //setting clilck listeners
+
+
+        feecollectorbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent o = new Intent(getApplicationContext(), studentListForFee.class);
+                startActivity(o);
+
+
+            }
+        });
 
         comaplainbtn.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Hostel Management System</string>
-    
-    
+
+
     <string-array name="Complain">
 
         <item>Namaj</item>
@@ -11,6 +11,22 @@
     </string-array>
 
 
+    <string-array name="monthName">
+        <item>Please Select The Month</item>
+        <item>JANUARY</item>
+        <item>FEBRUARY</item>
+        <item>MARCH</item>
+        <item>APRILL</item>
+        <item>MAY</item>
+        <item>JUNE</item>
+        <item>JULLY</item>
+        <item>AUGUST </item>
+        <item>SEPTEMBER</item>
+        <item>OCTOBER</item>
+        <item>NOVEMBER</item>
+        <item>DECEMBER</item>
+
+    </string-array>
 
 
 </resources>

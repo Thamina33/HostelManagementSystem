@@ -11,7 +11,12 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".AddComplain"></activity>
+        <activity android:name=".studentListForFee"
+            android:theme="@style/Theme.AppCompat.NoActionBar">
+
+
+        </activity>
+        <activity android:name=".AddComplain" />
         <activity
             android:name=".complainList"
             android:theme="@style/Theme.AppCompat.NoActionBar" />

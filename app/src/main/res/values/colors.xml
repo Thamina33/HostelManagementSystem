@@ -6,4 +6,5 @@
     <color name="myGrey">#aeaeae</color>
     <color name="green">#2ecc71</color>
     <color name="red">#bd081c</color>
+    <color name="my_spinner_text_color">#bd081c</color>
 </resources>

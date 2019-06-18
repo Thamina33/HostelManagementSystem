@@ -91,6 +91,7 @@ public class studentListPage extends AppCompatActivity {
                 View itemVIew = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_fees__row, viewGroup, false);
 
                 final viewHolderForStudentStudentList viewHolder = new viewHolderForStudentStudentList(itemVIew);
+
                 //itemClicklistener
                 viewHolder.setOnClickListener(new viewHolderForStudentStudentList.ClickListener() {
                     @Override

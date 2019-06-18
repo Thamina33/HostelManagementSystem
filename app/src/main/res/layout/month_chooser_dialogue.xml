@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:layout_height="250dp"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <EditText
+        android:id="@+id/etTitle_MONEY"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textColor="#ffffff"
+        android:textColorHint="@color/myGrey"
+        android:textSize="18sp"
+        android:hint="Amount"
+        android:inputType="text|textMultiLine"
+        />
+
+   <Spinner
+       android:id="@+id/spinneRR"
+       android:layout_width="wrap_content"
+        android:layout_marginTop="10dp"
+
+
+       android:layout_height="wrap_content">
+
+
+   </Spinner>
+
+
+</LinearLayout>
