@@ -21,6 +21,9 @@
             android:name=".complainList"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity
+            android:name=".addPaymentList"
+            android:theme="@style/hisabPageTheme" />
+        <activity
             android:name=".addExpencesList"
             android:theme="@style/hisabPageTheme" />
         <activity

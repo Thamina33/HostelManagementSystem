@@ -22,6 +22,7 @@ import com.firebase.ui.database.FirebaseRecyclerOptions;
 import com.google.android.material.appbar.MaterialToolbar;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
 
 public class studentListPage extends AppCompatActivity {
 
@@ -48,6 +49,7 @@ public class studentListPage extends AppCompatActivity {
         getSupportActionBar().setTitle("List");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
 
         //init view
@@ -171,6 +173,86 @@ public class studentListPage extends AppCompatActivity {
 
     }
 
+    public  void  firebaseSearch(String searchText ){
+
+        //convert string entered in SearchView to lowercase
+        String query = searchText;
+
+        Query firebaseSearchQuery = mRef.orderByChild("roll").startAt(query).endAt(query + "\uf8ff");
+
+
+        options = new FirebaseRecyclerOptions.Builder<modelForStudent>().setQuery(firebaseSearchQuery , modelForStudent.class)
+                .build() ;
+
+        firebaseRecyclerAdapter = new FirebaseRecyclerAdapter<modelForStudent, viewHolderForStudentStudentList>(options) {
+            @Override
+            protected void onBindViewHolder(@NonNull final   viewHolderForStudentStudentList holder, final int position, @NonNull modelForStudent model) {
+                holder.setDataToView(getApplicationContext(),model.getPostId() , model.getName() , model.getRoll(), model.getAclass()
+                        , model.getDoa(), model.getPaymonthList(), model.getSection(), model.getAddress(), model.getPh());
+
+            }
+
+            @NonNull
+            @Override
+            public viewHolderForStudentStudentList onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
+                //INflate the row
+                Context context;
+                View itemVIew = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.activity_fees__row, viewGroup, false);
+
+                final viewHolderForStudentStudentList viewHolder = new viewHolderForStudentStudentList(itemVIew);
+
+                //itemClicklistener
+                viewHolder.setOnClickListener(new viewHolderForStudentStudentList.ClickListener() {
+                    @Override
+                    public void onItemClick(View view, int position) {
+
+                        //Views
+                        //   TextView mTitleTv = view.findViewById(R.id.rTitleTv);
+                        //    TextView mDescTv = view.findViewById(R.id.rDescriptionTv);
+                        //     ImageView mImageView = view.findViewById(R.id.rImageView);
+                        String postId , name , roll  , aclass  ,doa  , paymonthList , section , address , ph  ;
+
+                        postId   = getItem(position).getPostId() ;
+                        name  = getItem(position).getName();
+                        roll = getItem(position).getRoll();
+                        aclass =  getItem(position).getAclass();
+                        doa =  getItem(position).getDoa();
+                        paymonthList =  getItem(position).getPaymonthList();
+                        section =  getItem(position).getSection();
+                        address = getItem(position).getAddress();
+                        ph =  getItem(position).getPh();
+
+                        //start dialogue
+
+                        openDialog( postId ,name , roll , aclass , doa  , paymonthList, section , address , ph );
+
+
+
+
+
+
+                    }
+
+                    @Override
+                    public void onItemLongClick(View view, int position) {
+
+                    }
+                });
+
+
+                return viewHolder;
+            }
+
+        };
+
+        mrecyclerview.setLayoutManager(mLayoutManager);
+        firebaseRecyclerAdapter.startListening();
+        //setting adapter
+
+        mrecyclerview.setAdapter(firebaseRecyclerAdapter);
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -184,13 +266,17 @@ public class studentListPage extends AppCompatActivity {
         searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
             @Override
             public boolean onQueryTextSubmit(String query) {
-             //   firebaseSearch(query);
+                firebaseSearch(query);
+
+
+
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String newText) {
-              //  firebaseSearch(newText); //filtering  as we Type
+             firebaseSearch(newText); //filtering  as we Type
+
                 return false;
             }
         });
@@ -223,5 +309,14 @@ public class studentListPage extends AppCompatActivity {
     public boolean onSupportNavigateUp() {
         onBackPressed();
         return true;
+    }
+
+    //load data into recycler view onStart
+    @Override
+    protected void onStart() {
+        super.onStart();
+        if(firebaseRecyclerAdapter !=null){
+            firebaseRecyclerAdapter.startListening();
+        }
     }
 }

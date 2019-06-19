@@ -5,10 +5,26 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#FFFFFF"
     android:layout_margin="20dp"
     tools:context=".AddComplain">
 
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="5dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbarComplain"
+            android:layout_width="match_parent"
+
+            android:layout_height="?attr/actionBarSize"
+            android:paddingEnd="16dp"
+            android:paddingStart="6dp"
+            android:background="#ffffff"
+            app:contentInsetStartWithNavigation="0dp"
+            app:navigationIcon="@drawable/backword_signsmall" />
+
+    </androidx.appcompat.widget.Toolbar>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -21,13 +37,47 @@
         android:layout_gravity="center"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/nameEditText"
+            android:layout_width="250dp"
+            android:hint="Name"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/classEditText"
+            android:layout_width="250dp"
+            android:hint="Class"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/rollEditText"
+            android:layout_width="250dp"
+            android:hint="Roll"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+
+
+
+    </LinearLayout>
+
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:elevation="8dp"
+        android:layout_gravity="center"
         tools:layout_editor_absoluteX="8dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
+        android:background="@color/myGrey"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         tools:layout_editor_absoluteY="114dp" />
@@ -36,8 +86,11 @@
         android:layout_height="wrap_content"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
+        android:layout_marginTop="15dp"
         android:hint="Complain Details ..."
-        android:inputType="text"
+        android:inputType="textMultiLine"
+
+        android:id="@+id/complainEditText"
 
         />
 
@@ -48,13 +101,15 @@
 
     <com.google.android.material.button.MaterialButton
 
-        android:id="@+id/expencesList"
+        android:id="@+id/submitComplain"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:textColor="#fff"
-        android:textSize="18dp"
+        android:textColor="#ffffff"
+        android:textSize="18sp"
+        android:textStyle="bold"
         android:background="@drawable/pink_gredient"
         android:text="Submit"
+        android:layout_marginBottom="100dp"
         android:textAllCaps="false"/>
     </LinearLayout>
 </LinearLayout>

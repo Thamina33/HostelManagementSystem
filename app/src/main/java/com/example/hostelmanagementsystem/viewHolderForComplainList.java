@@ -57,6 +57,8 @@ public class viewHolderForComplainList extends RecyclerView.ViewHolder {
         TextView mdetailsTv = mView.findViewById(R.id.detailsOfROWW);
 
 
+        mSectionTv.setVisibility(View.GONE);
+
         //set data to views
         mNameTv.setText(name);
         mPostTv.setText(postId);

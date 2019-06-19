@@ -1,12 +1,5 @@
 package com.example.hostelmanagementsystem;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.SearchView;
-import androidx.core.view.MenuItemCompat;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
 import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
@@ -21,6 +14,13 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.SearchView;
+import androidx.core.view.MenuItemCompat;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.firebase.ui.database.FirebaseRecyclerOptions;
@@ -40,18 +40,19 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.Locale;
 
-public class addExpencesList extends AppCompatActivity {
+public class addPaymentList  extends AppCompatActivity {
 
-MaterialButton toolbarBtn ;
-Dialog dialog ;
-String DATE  , time  ;
+
+    MaterialButton toolbarBtn ;
+    Dialog dialog ;
+    String DATE  , time  ;
     String db;
-String amount , reason , date ;
-DatabaseReference mRef ;
+    String amount , reason , date ;
+    DatabaseReference mRef ;
 
     MaterialToolbar toolbar ;
     RecyclerView mrecyclerview ;
-String Total ;
+    String Total ;
 
     LinearLayoutManager mLayoutManager; //for sorting
     FirebaseDatabase mFirebaseDatabase;
@@ -68,8 +69,8 @@ String Total ;
 
 
 
-    Intent i = getIntent() ;
-   db =   i.getStringExtra("DB") ;
+        Intent i = getIntent() ;
+        db =   i.getStringExtra("DB") ;
 
 
 
@@ -90,7 +91,7 @@ String Total ;
             @Override
             public void onClick(View view) {
                 startDialogue();
-             //   Toast.makeText(getApplicationContext() , "TTT", Toast.LENGTH_LONG).show();
+                //   Toast.makeText(getApplicationContext() , "TTT", Toast.LENGTH_LONG).show();
             }
         });
         //init view
@@ -119,7 +120,7 @@ String Total ;
             protected void onBindViewHolder(@NonNull final   viewHoderForExpenceList holder, final int position, @NonNull modelForExpences model) {
                 holder.setDataToView(getApplicationContext(), model.getReason()  , model.getAmount() , model.getDate());
 
-           //     String postId , name , roll  , aclass  ,doa  , paymonthList , section , address , ph  ;
+                //     String postId , name , roll  , aclass  ,doa  , paymonthList , section , address , ph  ;
 
             }
 
@@ -180,7 +181,7 @@ String Total ;
 
     public  void  startDialogue() {
 
-        dialog = new Dialog(addExpencesList.this);
+        dialog = new Dialog(addPaymentList.this);
         dialog.setContentView(R.layout.custom_dialogue);
         final EditText mEmail = (EditText) dialog.findViewById(R.id.etTitle);
         final EditText mPassword = (EditText) dialog.findViewById(R.id.etDesc);
@@ -197,9 +198,6 @@ String Total ;
                 reason = mEmail.getText().toString();
                 amount = mPassword.getText().toString();
 
-                reason = mEmail.getText().toString();
-                amount = mPassword.getText().toString();
-
                 if(!TextUtils.isEmpty(reason) || !TextUtils.isEmpty(amount)){
 
 
@@ -209,7 +207,6 @@ String Total ;
 
                 }
 
-               // uploadExpenceTofireBase(reason , amount);
 
 
 
@@ -222,6 +219,53 @@ String Total ;
 
     }
 
+    private void dwldTotalFromFirebase(final String reason, final String amount) {
+
+        DatabaseReference mrr  = FirebaseDatabase.getInstance().getReference("total");
+        mrr.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+
+
+                modelForSingleValues dwldData  = dataSnapshot.getValue(modelForSingleValues.class);
+
+
+                try {
+                    String Rrecieve = dwldData.getRecieve();
+                    String REASON  = reason ;
+                    String Amount = amount ;
+
+
+
+                    Double   mpayment = Double.valueOf(Rrecieve);
+
+                    double nowPay = Double.valueOf(amount);
+
+                    String total = String.valueOf(mpayment+ nowPay);
+
+                    uploadExpenceTofireBase(REASON ,Amount , total  );
+
+                }
+                catch (NullPointerException e ){
+
+
+
+
+
+                }
+
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+
+    }
 
 
     @Override
@@ -287,7 +331,7 @@ String Total ;
 
         DATE = new SimpleDateFormat("dd-MM-yyyy", Locale.getDefault()).format(new Date());
         time = time + " "+DATE ;
-        final String TOTAL = total ;
+final String TOTAL = total ;
 
 
 
@@ -304,7 +348,7 @@ String Total ;
 
                 // uploiaded
                 DatabaseReference mre = FirebaseDatabase.getInstance().getReference();
-                mre.child("total").child("expense").setValue(TOTAL).addOnCompleteListener(new OnCompleteListener<Void>() {
+                mre.child("total").child("recieve").setValue(TOTAL).addOnCompleteListener(new OnCompleteListener<Void>() {
                     @Override
                     public void onComplete(@NonNull Task<Void> task) {
 
@@ -335,51 +379,6 @@ String Total ;
     }
 
 
-    private void dwldTotalFromFirebase(final String reason, final String amount) {
-
-        DatabaseReference mrr  = FirebaseDatabase.getInstance().getReference("total");
-        mrr.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
 
 
-                modelForSingleValues dwldData  = dataSnapshot.getValue(modelForSingleValues.class);
-
-
-                try {
-                    String Rrecieve = dwldData.getExpense();
-                    String REASON  = reason ;
-                    String Amount = amount ;
-
-
-
-                    Double   mpayment = Double.valueOf(Rrecieve);
-
-                    double nowPay = Double.valueOf(amount);
-
-                    String total = String.valueOf(mpayment+ nowPay);
-
-                    uploadExpenceTofireBase(REASON ,Amount , total  );
-
-                }
-                catch (NullPointerException e ){
-
-
-
-
-
-                }
-
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-            }
-        });
-
-
-
-    }
 }

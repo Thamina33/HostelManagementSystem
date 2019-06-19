@@ -28,5 +28,31 @@
 
    </Spinner>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btnSubmit"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/green"
+            android:text="Upload"
+            android:textColor="@android:color/white" />
+
+        <Button
+            android:id="@+id/cancelBUTTON"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@color/red"
+            android:text="Cancel"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
 
 </LinearLayout>

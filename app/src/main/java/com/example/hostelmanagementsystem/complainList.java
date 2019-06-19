@@ -200,6 +200,12 @@ public class complainList extends AppCompatActivity {
                 // Not implemented here
 
                // openDialog();
+                customComplainDialouge dialog = new customComplainDialouge() ;
+
+                getSupportFragmentManager().beginTransaction();
+                getSupportFragmentManager().findFragmentByTag("add_complain_dialog");
+                dialog.show(getSupportFragmentManager(), "add_complain_dialog");
+
 
 
                 return false;

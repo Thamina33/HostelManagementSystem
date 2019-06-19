@@ -44,8 +44,10 @@ public class hisabPage extends AppCompatActivity {
         addPayMentBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i  = new Intent(getApplicationContext(), addExpencesList.class);
+                Intent i  = new Intent(getApplicationContext(), addPaymentList.class);
                 i.putExtra("DB", "recivePaymnetList") ;
+                i.putExtra("total",Rrecieve ) ;
+
                 startActivity(i);
 
             }
@@ -57,6 +59,7 @@ public class hisabPage extends AppCompatActivity {
 
                 Intent i  = new Intent(getApplicationContext(), addExpencesList.class);
                 i.putExtra("DB" , "expensesList") ;
+                i.putExtra("total",Rexpence ) ;
                 startActivity(i);
 
             }
